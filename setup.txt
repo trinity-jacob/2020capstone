@@ -1,0 +1,48 @@
+You need to get set up with two services in order to use this template
+
+The first is Google Cloud. To do this:
+1) Go to https://console.cloud.google.com/home/dashboard
+2) Log in with your OUSD credentials 
+3) At teh top of the screen click the project pulldown menu and then click "New Project" in the top left of the next window
+   then click the three lines in the top left to get a menu
+4) Give the project a descriptive name like the name of your app and click Create
+5) Click the three lines in the top left of the screen, and click API's & Services and then click Credentials
+6) Click Create Credentials and then OAuth Client ID
+7) Then click Web Application, 
+8) Give this a descriptive name like the name of your app.
+9) You can leave javascript origins blank
+10) in authorized redirect URI's you need to put both:
+    https://localhost:5000/oauth2callback
+    https://127.0.0.1:5000/oauth2callback
+11) Click Create
+12) You should now be on the Credentials page for you project. it should say "Client ID for Web application" 
+    at the top and next to that it should say Download JSON.  Click download JSON.
+13) The JSON file you download you need to rename as "credentials.json" and put it at the same 
+    level of flask app as the main.py file.
+
+The next is mlab.com where you will create your database and all the data from your site will be stored:
+1) Go to mlab.com and click sign up
+2) Once you are logged in, click the Create New button which is next to MongoDB Deployments
+3) Under Cloud Provide pick Google Cloud Platform and under Plan Type click Sandbox (Free) and then click Continue at the bottom left.
+4) Then click a region (probably only Iowa) and click Continue
+5) Give your database a descriptive name
+6) Click Continue
+7) Click Submit order
+8) Click in to the database you just created and find the Users button
+9) Create a new user and password and remember the user name and password
+10) Then find the find the string that looks like this:
+    mongodb://<dbuser>:<dbpassword>@ds055689.mlab.com:55689/compsciapp
+    and replace <dbuser> with the username you just created
+    and replace <dbpassword> with the password you just created
+    you should have something like this
+    mongodb://admin:secretPassw0rd@ds055689.mlab.com:55689/compsciapp
+11) take that string and place it in the __init__.py file in the app folder
+
+Now you need to install all of python packages you need.  To do this, open a command prompt in the at the same level as the 
+requirements.txt file and run the followng command:
+
+pip install -r requirements.txt
+
+You should be ready to go!
+
+To run your app simply run the main.py file with the python command
