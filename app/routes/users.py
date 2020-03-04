@@ -31,13 +31,7 @@ import google_auth_oauthlib.flow
 import googleapiclient.discovery
 import os
 
-# Google Login Code
-# The CLIENT_SECRETS_FILE comes from https://console.cloud.google.com/home/dashboard
-# Once you log in with your OUSD credentials you need to create a new project
-# then click the three lines in the top left to get a menu
-# Then MouseOver APIs and Services and choose Credentials. From there you download the JSON
-# and put it in the credentials.json file at the root level of this app.
-
+# this is a reference to the google project json file you downloaded using the setup.txt instructions
 CLIENT_SECRETS_FILE = "credentials.json"
 
 # List of email addresses for Admin users
