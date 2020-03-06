@@ -5,11 +5,13 @@ The first is Google Cloud. To do this:
 ### This will not work with your OUSD account so you need to use a personal email account ###
 1) Go to https://console.cloud.google.com/home/dashboard
 2) Log in with your personal email credentials 
-3) At teh top of the screen click the project pulldown menu and then click "New Project" in the top left of the next window
+3) At the top of the screen click the project pulldown menu and then click "New Project" in the top left of the next window
    then click the three lines in the top left to get a menu
 4) Give the project a descriptive name like the name of your app and click Create
 5) Click the three lines in the top left of the screen, and click API's & Services and then click Credentials
-6) You will probably be asked to fill out some fields for the "Consent Screen".  These are not important for how your app works
+6) You will probably be asked to fill out some fields for the "Consent Screen".  The only important part is that you click 
+    the option to allow people "outside of your organization" to access your app.  If you do not do that then only you will be 
+    able to login.  The reset of the options are not important for how your app works
     but are important for communicating to your user what they are consenting to.  Fill it out.
 7) Click Create Credentials and then click OAuth Client ID
 8) Then click Web Application, 
