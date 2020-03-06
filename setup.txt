@@ -51,9 +51,11 @@ The next is mlab.com where you will create your database and all the data from y
 
 ### Final steps ###
 
-Now you need to install all of python packages you need.  To do this, open a command prompt in the at the same level as the 
-requirements.txt file and run the followng command:
+Now you need to install all of python packages you need.  To do this, open the terminal via your editor 
+(Atom or visual code studio - I definitely recommend using Visual Code Studio) and run the following
+two commands:
 
+conda activate
 pip install -r requirements.txt
 
 You should be ready to go!
