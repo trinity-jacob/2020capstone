@@ -4,6 +4,8 @@ group member do this.
 The first is Google Cloud. To do this:
 ### This will not work with your OUSD account so you need to use a personal email account ###
 1) Go to https://console.cloud.google.com/home/dashboard
+    Here is a video of the process:
+    https://drive.google.com/file/d/1lB2RDJe9CD1eeHFYwFn3aQT-7dt_YuuO/view
 2) Log in with your personal email credentials 
 3) At the top of the screen click the project pulldown menu and then click "New Project" in the top left of the next window
    then click the three lines in the top left to get a menu
@@ -26,28 +28,18 @@ The first is Google Cloud. To do this:
 14) The JSON file you download you need to rename as "credentials.json" and put it at the same 
     level of flask app as the main.py file.
 
-The next is mlab.com where you will create your database and all the data from your site will be stored:
-### Mlab has updated its service and I will need to change these instructions to refelct that ###
-### You now need to use mongodb.com ###
-### More soon ###
-
-### These mlab instructions are wrong but informative. ###
-1) Go to mlab.com and click sign up
-2) Once you are logged in, click the Create New button which is next to MongoDB Deployments
-3) Under Cloud Provide pick Google Cloud Platform and under Plan Type click Sandbox (Free) and then click Continue at the bottom left.
-4) Then click a region (probably only Iowa) and click Continue
-5) Give your database a descriptive name
-6) Click Continue
-7) Click Submit order
-8) Click in to the database you just created and find the Users button
-9) Create a new user and password and remember the user name and password
-10) Then find the find the string that looks like this:
-    mongodb://<dbuser>:<dbpassword>@ds055689.mlab.com:55689/compsciapp
+The next is mongodb.com where you will create your database and all the data from your site will be stored.
+Here is a link to video I made about the process for getting a mongodb.com account:
+1) Watch the video at this link
+    https://drive.google.com/file/d/1tDZzE4Yb2C8OK6MXn4n_8LgQyHFr9eCW/view
+    to see how to get an account at mongodb.com and find the code you need to include in your app.
+1) At the end of the video you will have copied a string that looks like this:
+    mongodb+srv://admin:<password>@cluster0-8m0v1.gcp.mongodb.net/test?retryWrites=true&w=majority   
+    and now you need to paste it in to your app. 
+2) Go to the __init__.py file in the app folder (app/__init__.py) and replace the connect string that is there
     and replace <dbuser> with the username you just created
     and replace <dbpassword> with the password you just created
-    you should have something like this
-    mongodb://admin:secretPassw0rd@ds055689.mlab.com:55689/compsciapp
-11) take that string and place it in the __init__.py file in the app folder
+2) take that string and place it in the __init__.py file in the app folder
 
 ### Final steps ###
 
